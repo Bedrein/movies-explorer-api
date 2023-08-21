@@ -4,7 +4,6 @@
 ______________________________________________________________
 
 Данный REST API предназначен для обеспечения аутентификации пользователей и сохранения фильмов в списке избранных. Оно разработано для поддержки сервиса Movie Explorer, который предоставляет возможность поиска фильмов по ключевым словам.
-________________________________________________________________
 
 ## Адрес домена сервера:
 
@@ -33,7 +32,7 @@ _________________
 ## Методы и роуты
 - **GET -> /users/me**:	возвращает email и имя
 - **PATCH -> /users/me**:	обновляет информацию о пользователе с переданными в body email и имя
-- ** POST -> /movies**:	создаёт фильм с переданными в body country, director, duration, year, description, image, trailer, nameRU, nameEN, movieId и thumbnail
+- **POST -> /movies**:	создаёт фильм с переданными в body country, director, duration, year, description, image, trailer, nameRU, nameEN, movieId и thumbnail
 - **GET -> /movies**:	возвращает все сохранённые пользователем фильмы
 - **DELETE -> /movies/movieId**:	удаляет сохранённый фильм по его _id
 - **POST -> /signup**:	создает пользователя с переданными в body email, password, name
