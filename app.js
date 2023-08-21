@@ -14,7 +14,7 @@ mongoose.connect(MONGO_DB);
 
 const app = express();
 
-app.use(cors({ origin: ['http://localhost:3000', 'http://localhost:3001'] }));
+app.use(cors({ origin: ['http://api.bedrein-movies.nomoredomainsicu.ru', 'https://api.bedrein-movies.nomoredomainsicu.ru', 'http://localhost:3000', 'http://localhost:3001'] }));
 
 app.use(helmet());
 
