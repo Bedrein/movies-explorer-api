@@ -65,9 +65,12 @@ function updateProfileInfo(req, res, next) {
     .catch((err) => {
       if (err.name === 'ValidationError') {
         next(new BadRequestError('Переданы некорректные данные'));
-      } else {
-        next(err);
       }
+      if (err.code === 11000) {
+        next(new NouniqueError('При изменении указан email, который уже существует'));
+        return;
+      }
+      next(err);
     });
 }
 
